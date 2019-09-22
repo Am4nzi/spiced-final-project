@@ -1,0 +1,12 @@
+.grid-wrapper{
+    position: relative;
+    width: 150%;
+    max-width: 1170px;
+    background: #BBC7D3;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.grid{
+    margin-top: 3vh
+}
