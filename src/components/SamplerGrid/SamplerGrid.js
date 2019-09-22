@@ -53,7 +53,7 @@ const SamplerGrid = () => {
     return (
         <div
         className="grid-wrapper"
-        
+
         >
         <Hud />
             <div className="grid">

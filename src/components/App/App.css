@@ -76,3 +76,11 @@ header {
     grid-row-end: 27;
     z-index: 3;
 }
+
+.x {
+    grid-column-start: 26;
+    grid-column-end: 26;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: yellow;
+}
