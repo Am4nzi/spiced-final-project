@@ -1,9 +1,11 @@
 import React, {useContext} from 'react';
+import SamplerGrid from "../SamplerGrid/SamplerGrid";
 import {Context} from '../../contexts/SamplerContext';
 import {handlePadTrigger} from '../../actions'
 import Colors from '../../Config/ColorScheme';
 import touchCTRL from '../../Config/touchControls';
 import './Pad.css';
+import { setCTX } from "../../actions";
 
 export default (props) => {
     const context = useContext(Context);

@@ -2,14 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {SamplerContextStore} from './contexts/SamplerContext';
 import App from './components/App/App';
+// import { createStore, applyMiddleware } from 'redux';
+// import reducer from './reducers/samplerReducer';
 
-// const path = require("path");
-// const express = require('express');
-// const app = express();
-//
-// const server = require("http").Server(app);
-//
-// app.use(express.static("public"));
+// const store = createStore(reducer, composeWithDevTools(applyMiddleware(reduxPromise)));
 
 ReactDOM.render(
     <SamplerContextStore>
@@ -17,7 +13,3 @@ ReactDOM.render(
     </SamplerContextStore>,
     document.getElementById('root')
   );
-
-  // server.listen(8080, function() {
-  //     console.log("I'm listening.");
-  // });

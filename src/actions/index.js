@@ -5,6 +5,7 @@ export const setCTX = async (context) => {
     let ctx = !context.ctx ? new (window.AudioContext || window.webkitAudioContext)() : null;
     createAnalyser(context, ctx)
 }
+
 export const createAnalyser = (context, ctx) =>{
     let analyser = ctx.createAnalyser();
     analyser.connect(ctx.destination);
