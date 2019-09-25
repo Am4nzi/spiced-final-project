@@ -94,6 +94,7 @@ function applyDirectives(options) {
             line: directive.unprocessedDirective.line,
             column: directive.unprocessedDirective.column,
             severity: 2,
+            source: null,
             nodeType: null
         }));
 

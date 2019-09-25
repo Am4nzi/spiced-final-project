@@ -19,8 +19,7 @@ const ajv = new Ajv({
     meta: false,
     validateSchema: false,
     missingRefs: "ignore",
-    verbose: true,
-    schemaId: "auto"
+    verbose: true
 });
 
 ajv.addMetaSchema(metaSchema);
