@@ -81,8 +81,8 @@ header {
 .tour-dates-container {
     grid-column-start: 2;
 grid-column-end: 26;
-grid-row-start: 19;
-grid-row-end: 25;
+grid-row-start: 5;
+grid-row-end: 18;
 background-color: #81c9b8;
 z-index: 100;
 margin-left: 2px;
@@ -91,6 +91,12 @@ display: grid;
 grid-template-rows: repeat(1, 48px);
 grid-auto-rows: 48px;
 grid-template-columns: 180px 400px 379px 168px;
+-webkit-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+-webkit-animation-name: tourdates;
+animation-name: tourdates;
 }
 
 .tour-dates-container > p {
@@ -106,6 +112,8 @@ grid-template-columns: 180px 400px 379px 168px;
 
 .get-tickets {
     justify-self: right;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .city {
@@ -346,16 +354,17 @@ grid-template-columns: 180px 400px 379px 168px;
 .tour-dates h2 {
   margin-top: 6px;
   font-family: din-2014, sans-serif;
-  font-size: 1rem;
+  font-size: 1.7rem;
   letter-spacing: 0.5em;
   font-weight: 400;
   margin-left: 21px;
-  margin-bottom: -4px;
+  margin-bottom: 4px;
 
 }
 
 
 .tour-dates p {
+     font-family: din-2014, sans-serif;
   font-size: 1rem;
   letter-spacing: 0.3em;
   font-weight: 400;
@@ -388,6 +397,40 @@ grid-template-columns: 180px 400px 379px 168px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.tour-dates-expand {
+    grid-column-start: 25;
+    grid-column-end: 26;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.see-all-dates {
+    grid-column-start: 20;
+    grid-column-end: 26;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: #81c9b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.see-all-dates p {
+  font-size: 1.3rem;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+}
+
+.open-tour-dates-modal {
+  width: 60%;
+  transform: rotate(180deg);
 }
 
 .tour-dates2 h2 {
@@ -641,6 +684,16 @@ grid-template-columns: 180px 400px 379px 168px;
   from {
     transform: scale(0) translate(-100px, -50px);
     transform-origin: bottom left;
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes tourdates {
+  from {
+    transform: scale(0) translate(550px, -300px);
+    transform-origin: top right;
   }
   to {
     transform: scale(1);

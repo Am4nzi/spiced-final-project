@@ -2,16 +2,9 @@ import React, { useState, useEffect } from "react";
 import Sampler from "./sampler";
 import Tone from "tone";
 
-export function showModal() {
-  if (showModalValue === false) {
-    setShowModalValue(true);
-  } else if (showModalValue === true) {
-    setShowModalValue(false);
-  }
-}
-
 export default function App() {
   const [showModalValue, setShowModalValue] = useState(false);
+  const [showModalTourValue, setShowModalTourValue] = useState(false);
   const [bpm, setBpm] = useState();
   const [musicPlayer0, setMusicPlayer0] = useState("musicPlayer0");
   const [musicPlayer01, setMusicPlayer01] = useState("music-player1");
@@ -27,6 +20,14 @@ export default function App() {
       setShowModalValue(true);
     } else if (showModalValue === true) {
       setShowModalValue(false);
+    }
+  };
+
+  const showModalTour = function() {
+    if (showModalTourValue === false) {
+      setShowModalTourValue(true);
+  } else if (showModalTourValue === true) {
+      setShowModalTourValue(false);
     }
   };
 
@@ -335,12 +336,101 @@ export default function App() {
 
   return (
     <React.Fragment>
-          <div id="body-wrapper">
-          <header></header>
-          <div className="tour-dates-container">
-          <p >31 SEPTEMBER</p><p>Brudenell Social Club</p><p className="city">Leeds, England</p><p className="get-tickets">Get Tickets</p>
-          <p>31 OCTOBER</p><p>Brudenell Social Club</p><p className="city">Leeds, England</p><p className="get-tickets">Get Tickets</p>
-          </div>
+      <div id="body-wrapper">
+        <header></header>
+
+        {showModalTourValue && (
+        <div className="tour-dates-container">
+
+          <p>31 SEPTEMBER</p>
+          <p>Brudenell Social Club</p>
+          <p className="city">Leeds, England</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>3 OCTOBER</p>
+          <p>The Deaf Institute</p>
+          <p className="city">Manchester, England</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>11 OCTOBER</p>
+          <p>DIY Spice for London</p>
+          <p className="city">London, England</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>12 OCTOBER</p>
+          <p>The ShackleWell Arms</p>
+          <p className="city">London, England</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>13 OCTOBER</p>
+          <p>The Windmill</p>
+          <p className="city">London, England</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>25 OCTOBER</p>
+          <p>Loophole</p>
+          <p className="city">Berlin, Germany</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>26 OCTOBER</p>
+          <p>MultiTonal Festival @ Kraftwerk</p>
+          <p className="city">Berlin, Germany</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>27 OCTOBER</p>
+          <p>ACUD MACHT NEU</p>
+          <p className="city">Berlin, Germany</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>31 OCTOBER</p>
+          <p>Vega Musikkens Hus</p>
+          <p className="city">Copenhagen, Demark</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>1 November</p>
+          <p>Underwerket</p>
+          <p className="city">Copenhagen, Demark</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>4 November</p>
+          <p>The Legends Bar</p>
+          <p className="city">Frederikssund, Denmark</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>23 November</p>
+          <p>Strange Forms Festival</p>
+          <p className="city">Leeds, England</p>
+          <p className="get-tickets">Get Tickets</p>
+
+          <p>24 November</p>
+          <p>Strange Forms Festival</p>
+          <p className="city">Leeds, England</p>
+          <p className="get-tickets">Get Tickets</p>
+
+        </div>
+        )}
+
+        <div className="tour-dates">
+          <h2 className="next-gig">NEXT GIG</h2>
+        </div>
+        <div className="tour-dates2">
+          <h2>SEPT</h2>
+        </div>
+        <div className="tour-dates3">
+          <h2>31</h2>
+        </div>
+        <div className="tour-dates-expand">
+          <img
+            className="open-tour-dates-modal"
+            onClick={showModalTour}
+            src="/images/expand.png"
+          />
+        </div>
+        <div className="see-all-dates">
+          <p>SEE ALL GIGS</p>
+        </div>
+
+
         {showModalValue && (
           <div className="sampler-container">
             <img
@@ -351,7 +441,6 @@ export default function App() {
             <Sampler />
           </div>
         )}
-
 
         <div className="sampler-opener" onClick={showModal}>
           <img
@@ -368,15 +457,7 @@ export default function App() {
           <h1 className="logo">ALGERNON CORNELIUS</h1>
         </div>
 
-        <div className="tour-dates">
-          <h2 className="next-gig">NEXT GIG</h2>
-        </div>
-        <div className="tour-dates2">
-          <h2>OCT</h2>
-        </div>
-        <div className="tour-dates3">
-          <h2>31</h2>
-        </div>
+
         <div className="box"></div>
         <div className="box02"></div>
         <div onClick={swapMPlayerLeft} className="albums-left"></div>
@@ -391,7 +472,15 @@ export default function App() {
           ></iframe>
         </div>
 
-        <iframe className={musicPlayer01} src="https://bandcamp.com/EmbeddedPlayer/album=3937120203/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="http://algernoncornelius.bandcamp.com/album/in2trumentals">In2trumentals by Algernon Cornelius</a></iframe>
+        <iframe
+          className={musicPlayer01}
+          src="https://bandcamp.com/EmbeddedPlayer/album=3937120203/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
+          seamless
+        >
+          <a href="http://algernoncornelius.bandcamp.com/album/in2trumentals">
+            In2trumentals by Algernon Cornelius
+          </a>
+        </iframe>
 
         <iframe
           className={musicPlayer02}
@@ -403,12 +492,36 @@ export default function App() {
           </a>
         </iframe>
 
-        <iframe className={musicPlayer03} src="https://bandcamp.com/EmbeddedPlayer/album=897381078/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="http://algernoncornelius.bandcamp.com/album/instrum3ntals">Instrum3ntals by Algernon Cornelius</a></iframe>
+        <iframe
+          className={musicPlayer03}
+          src="https://bandcamp.com/EmbeddedPlayer/album=897381078/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
+          seamless
+        >
+          <a href="http://algernoncornelius.bandcamp.com/album/instrum3ntals">
+            Instrum3ntals by Algernon Cornelius
+          </a>
+        </iframe>
 
-<iframe className={musicPlayer04} src="https://bandcamp.com/EmbeddedPlayer/album=2117210254/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="http://algernoncornelius.bandcamp.com/album/botanical">Botanical by Algernon Cornelius</a></iframe>
+        <iframe
+          className={musicPlayer04}
+          src="https://bandcamp.com/EmbeddedPlayer/album=2117210254/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
+          seamless
+        >
+          <a href="http://algernoncornelius.bandcamp.com/album/botanical">
+            Botanical by Algernon Cornelius
+          </a>
+        </iframe>
 
-
-        <iframe className={musicPlayer05} src="https://bandcamp.com/EmbeddedPlayer/album=557612822/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="http://algernoncornelius.bandcamp.com/album/dock-heist-unit-sp404lofilosttapecirca96monomix">Dock Heist Unit (SP404LOFILOSTTAPECIRCA96MONOMIX) by Algernon Cornelius</a></iframe>
+        <iframe
+          className={musicPlayer05}
+          src="https://bandcamp.com/EmbeddedPlayer/album=557612822/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
+          seamless
+        >
+          <a href="http://algernoncornelius.bandcamp.com/album/dock-heist-unit-sp404lofilosttapecirca96monomix">
+            Dock Heist Unit (SP404LOFILOSTTAPECIRCA96MONOMIX) by Algernon
+            Cornelius
+          </a>
+        </iframe>
 
         <iframe
           className={musicPlayer06}
