@@ -59,8 +59,8 @@ header {
 .box {
     grid-column-start: 16;
        grid-column-end: 22;
-       grid-row-start: 7;
-       grid-row-end: 16;
+       grid-row-start: 6;
+       grid-row-end: 15;
        background-color: #81c9b8;
        margin-top: 2px;
        margin-left: 2px;
@@ -70,8 +70,8 @@ header {
 .box02 {
     grid-column-start: 20;
    grid-column-end: 26;
-   grid-row-start: 9;
-   grid-row-end: 18;
+   grid-row-start: 8;
+   grid-row-end: 17;
    background-color: #81c9b8;
    /* height: 93%; */
    margin-top: 2px;
@@ -157,7 +157,7 @@ animation-name: tourdates;
   width: 290px;
   grid-column-start: 16;
   grid-column-end: 26;
-  grid-row-start: 7;
+  grid-row-start: 6;
   z-index: -20;
 }
 
@@ -167,7 +167,7 @@ animation-name: tourdates;
   width: 290px;
   grid-column-start: 16;
   grid-column-end: 26;
-  grid-row-start: 7;
+  grid-row-start: 6;
   z-index: -20;
   /* opacity: 0.5; */
 }
@@ -178,7 +178,7 @@ animation-name: tourdates;
   width: 290px;
   grid-column-start: 16;
   grid-column-end: 26;
-  grid-row-start: 7;
+  grid-row-start: 6;
   z-index: -20;
   /* opacity: 0.5; */
 }
@@ -189,7 +189,7 @@ animation-name: tourdates;
   width: 290px;
   grid-column-start: 16;
   grid-column-end: 26;
-  grid-row-start: 7;
+  grid-row-start: 6;
   z-index: -20;
   /* opacity: 0.5; */
 }
@@ -200,7 +200,7 @@ animation-name: tourdates;
     width: 290px;
     grid-column-start: 16;
     grid-column-end: 26;
-    grid-row-start: 7;
+    grid-row-start: 6;
     z-index: 3;
     opacity: 0.6;
     margin-top: 2px;
@@ -213,7 +213,7 @@ animation-name: tourdates;
   width: 290px;
   grid-column-start: 18;
   grid-column-end: 26;
-  grid-row-start: 8;
+  grid-row-start: 7;
   z-index: 9;
   margin-top: 2px;
   -webkit-animation-duration: 1s;
@@ -230,7 +230,7 @@ animation-name: tourdates;
   width: 290px;
   grid-column-start: 18;
   grid-column-end: 26;
-  grid-row-start: 8;
+  grid-row-start: 7;
   z-index: 9;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -244,8 +244,8 @@ animation-name: tourdates;
 .music-player3 {
     border: 0;    grid-column-start: 20;
     grid-column-end: 26;
-    grid-row-start: 9;
-    grid-row-end: 18;
+    grid-row-start: 10;
+    grid-row-end: 19;
     background-color: #81c9b8;
     width: 99%;
     /* height: 93%; */
@@ -255,7 +255,7 @@ animation-name: tourdates;
         width: 286px;
         grid-column-start: 20;
         grid-column-end: 26;
-        grid-row-start: 9;
+        grid-row-start: 8;
         z-index: 3;
         opacity: 0.6;
         margin-top: 2px;
@@ -268,7 +268,7 @@ animation-name: tourdates;
   width: 290px;
   grid-column-start: 16;
   grid-column-end: 26;
-  grid-row-start: 7;
+  grid-row-start: 6;
   z-index: -5;
 }
 
@@ -279,7 +279,7 @@ animation-name: tourdates;
   width: 290px;
   grid-column-start: 16;
   grid-column-end: 26;
-  grid-row-start: 7;
+  grid-row-start: 6;
   z-index: -5;
 }
 
@@ -289,7 +289,7 @@ animation-name: tourdates;
   width: 290px;
   grid-column-start: 16;
   grid-column-end: 26;
-  grid-row-start: 7;
+  grid-row-start: 6;
   z-index: -5;
 }
 
@@ -299,7 +299,7 @@ animation-name: tourdates;
   width: 290px;
   grid-column-start: 16;
   grid-column-end: 26;
-  grid-row-start: 7;
+  grid-row-start: 6;
   z-index: -5;
 }
 
@@ -322,7 +322,7 @@ animation-name: tourdates;
 .albums-left {
   grid-column-start: 16;
   grid-column-end: 22;
-  grid-row-start: 7;
+  grid-row-start: 6;
   grid-row-end: 16;
   background-color: transparent;
   z-index: 6;
@@ -331,7 +331,7 @@ animation-name: tourdates;
 .albums-right {
   grid-column-start: 20;
   grid-column-end: 26;
-  grid-row-start: 9;
+  grid-row-start: 8;
   grid-row-end: 18;
   background-color: transparent;
   z-index: 6;
@@ -515,26 +515,29 @@ animation-name: tourdates;
 }
 
 .sampler-modal h1 {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  font-family: din-2014, sans-serif;
-  letter-spacing: 0.1em;
-  font-weight: 400;
-  font-size: 3rem;
-  margin-top: -20px;
+    grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        font-family: din-2014, sans-serif;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+        font-size: 4.5rem;
+        margin-top: -20px;
+        margin-left: 18px;
+
 }
 
 .pad-container {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 13;
   display: grid;
   grid-template-columns: repeat(8, 48px);
   grid-template-rows: repeat(10, 48px);
 }
+
 
 .pad1 {
   grid-column-start: 1;
@@ -682,7 +685,7 @@ animation-name: tourdates;
 
 @keyframes growsampler {
   from {
-    transform: scale(0) translate(-100px, -50px);
+    transform: scale(0) translate(-400px, 0px);
     transform-origin: bottom left;
   }
   to {
@@ -701,77 +704,108 @@ animation-name: tourdates;
 }
 
 .set-distortion {
-  grid-column-start: 12;
-  grid-column-end: 19;
-  grid-row-start: 3;
+  grid-column-start: 14;
+  grid-column-end: 21;
+  grid-row-start: 4;
   grid-row-end: 9;
 }
 
 .set-reverb {
-  grid-column-start: 12;
-  grid-column-end: 19;
-  grid-row-start: 5;
+  grid-column-start: 14;
+  grid-column-end: 21;
+  grid-row-start: 6;
   grid-row-end: 11;
 }
 
 .set-pitch {
-  grid-column-start: 12;
-  grid-column-end: 19;
-  grid-row-start: 7;
+  grid-column-start: 14;
+  grid-column-end: 21;
+  grid-row-start: 8;
   grid-row-end: 13;
 }
 
 .set-pingpong {
-  grid-column-start: 12;
-  grid-column-end: 19;
-  grid-row-start: 9;
+  grid-column-start: 14;
+  grid-column-end: 21;
+  grid-row-start: 10;
   grid-row-end: 15;
 }
 
 .set-bpm {
-  grid-column-start: 1;
-  grid-column-end: 7;
-  grid-row-start: 0;
-  grid-row-end: 5;
-  direction: rtl;
-  /* transform: rotate(90deg); */
-  transform: rotate(90deg) translateY(107px) translateX(25px);
+    grid-column-start: 4;
+    grid-column-end: 11;
+    grid-column-end: 8;
+    grid-row-start: 0;
+    grid-row-end: 5;
+    direction: rtl;
+    /* transform: rotate(90deg); */
+    transform: rotate(90deg) translateY(118px) translateX(96px);
+}
+
+.set-bpm-label {
+    grid-column-start: 1;
+    grid-column-end: 19;
+    grid-row-start: 5;
+    grid-row-end: 12;
+    margin-left: 20px;
+    margin-top: 43px;
+}
+
+.metronome-label {
+    grid-column-start: 1;
+    grid-column-end: 19;
+    grid-row-start: 2;
+    grid-row-end: 12;
+    margin-left: 20px;
+    margin-top: 59px;
+}
+
+
+.start-stop-label {
+    grid-column-start: 1;
+    grid-column-end: 19;
+    grid-row-start: 9;
+    grid-row-end: 12;
+    margin-left: 20px;
+    margin-top: 35px;
 }
 
 .bpm-label {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 9;
-  grid-row-end: 10;
-  text-align: center;
-  margin-left: -24px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 10;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 30px;
 }
 
+
 .distortion-label {
-  grid-column-start: 12;
-  grid-column-end: 17;
-  grid-row-start: 2;
+  grid-column-start: 14;
+  grid-column-end: 19;
+  grid-row-start: 3;
   grid-row-end: 10;
 }
 
 .reverb-label {
-  grid-column-start: 12;
-  grid-column-end: 17;
-  grid-row-start: 4;
+  grid-column-start: 14;
+  grid-column-end: 19;
+  grid-row-start: 5;
   grid-row-end: 10;
 }
 
 .pitch-label {
-  grid-column-start: 12;
-  grid-column-end: 17;
-  grid-row-start: 6;
+  grid-column-start: 14;
+  grid-column-end: 19;
+  grid-row-start: 7;
   grid-row-end: 10;
 }
 
 .pingpong-label {
-  grid-column-start: 12;
-  grid-column-end: 17;
-  grid-row-start: 8;
+  grid-column-start: 14;
+  grid-column-end: 19;
+  grid-row-start: 9;
   grid-row-end: 12;
 }
 
@@ -783,13 +817,23 @@ animation-name: tourdates;
 }
 
 .metronome-play-button {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 8;
-  grid-row-end: 9;
-  background-color: red;
-  transform: translateY(10px) translateX(13px);
+    grid-column-start: 3;
+    grid-column-end: 0;
+    grid-row-start: 9;
+    grid-row-end: 10;
+
+    transform: translateY(35px) translateX(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
+.metronome-play-button img {
+    width: 32px;
+}
+
 
 .close-modal {
   position: absolute;

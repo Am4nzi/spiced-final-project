@@ -5,7 +5,8 @@ import App from './app'
 
 export default function Sampler() {
 const [showModalValue, setShowModalValue] = useState(true);
-  const [startMetronome, setStartMetronome] = useState("off");
+  const [startMetronome, setStartMetronome] = useState(false);
+  const [playButton, setPlayButton] = useState("/images/play-button.png")
   const [bpm, setBpm] = useState(375);
   const [defaultBpm, setDefaultBpm] = useState("750.5");
   const [showBpm, setShowBpm] = useState("160");
@@ -15,16 +16,6 @@ const [showModalValue, setShowModalValue] = useState(true);
   const [pingPongValue, setPingPongValue] = useState(0);
   const [sample1Value, setSample1Value] = useState();
   const [timer, setTimer] = useState();
-
-
-  const showModal = function() {
-      if (showModalValue === false) {
-          setShowModalValue(true)
-
-      } else if (showModalValue === true) {
-          setShowModalValue(false)
-          }
-  }
 
   var distortion = new Tone.Distortion(distortionValue).toMaster();
 
@@ -48,8 +39,9 @@ const [showModalValue, setShowModalValue] = useState(true);
   const snareLoop = e => {
     console.log("BPM in snareLoop", bpm);
     console.log("BEFORE: ", startMetronome);
-    if (startMetronome === "off") {
-      setStartMetronome("on");
+    if (startMetronome === false) {
+      setStartMetronome(true);
+      setPlayButton("/images/stop.png")
       console.log("AFTER: ", startMetronome);
       var sampler = new Tone.Sampler(
         {
@@ -65,10 +57,11 @@ const [showModalValue, setShowModalValue] = useState(true);
           );
         }
       ).toMaster();
-    } else if (startMetronome === "on") {
+  } else if (startMetronome === true) {
       console.log("TIMER: ", timer);
       clearTimeout(timer);
-      setStartMetronome("off");
+      setStartMetronome(false);
+      setPlayButton("/images/play-button.png")
     }
   };
 
@@ -99,7 +92,7 @@ const [showModalValue, setShowModalValue] = useState(true);
       console.log(reverbValue);
       var sampler = new Tone.Sampler(
         {
-          C3: "/samples/snare.wav"
+          C3: "/samples/snare-g.wav"
         },
         function() {
           sampler.triggerAttack("C3");
@@ -482,9 +475,9 @@ const [showModalValue, setShowModalValue] = useState(true);
   return (
     <React.Fragment>
       <div className="sampler-modal">
-
-        <h1>SAMPLER</h1>
+      <h1>SAMPLER</h1>
         <div className="pad-container">
+
                         <div
                             onClick={playSample1}
                             className={["pad1", "sampler-pad"].join(" ")}
@@ -537,8 +530,15 @@ const [showModalValue, setShowModalValue] = useState(true);
                     </div>
 
         <h3 className="bpm-label"> {showBpm}</h3>
+        <h3 className="metronome-label">METRONOME</h3>
+        <h3 className="set-bpm-label">SET BPM</h3>
+        <h3 className="start-stop-label">START<br></br>STOP</h3>
 
-        <div className="metronome-play-button" onClick={snareLoop}></div>
+
+        <div className="metronome-play-button" onClick={snareLoop}> <img
+                     src={playButton}
+         /></div>
+
         <div className="set-bpm">
           <input
             onChange={onUserChange}
