@@ -487,7 +487,7 @@ export default function App() {
         <div className="video-wrapper">
           <iframe
             className="video"
-            src="https://www.youtube.com/embed/vFNbj8KI0Rc?start=3&controls=0&showinfo=0&loop=1&modestbranding=1"
+            src="https://www.youtube.com/embed/vFNbj8KI0Rc?start=17&controls=0&showinfo=0&loop=1&modestbranding=1"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
           ></iframe>

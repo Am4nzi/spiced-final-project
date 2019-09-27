@@ -5,6 +5,22 @@ import App from './app'
 
 export default function Sampler() {
 const [showModalValue, setShowModalValue] = useState(true);
+const [keyPressAnimation, storeKeyPressAnimation] = useState();
+const [keyPressAnimation2, storeKeyPressAnimation2] = useState();
+const [keyPressAnimation3, storeKeyPressAnimation3] = useState();
+const [keyPressAnimation4, storeKeyPressAnimation4] = useState();
+const [keyPressAnimation5, storeKeyPressAnimation5] = useState();
+const [keyPressAnimation6, storeKeyPressAnimation6] = useState();
+const [keyPressAnimation7, storeKeyPressAnimation7] = useState();
+const [keyPressAnimation8, storeKeyPressAnimation8] = useState();
+const [keyPressAnimation9, storeKeyPressAnimation9] = useState();
+const [keyPressAnimation10, storeKeyPressAnimation10] = useState();
+const [keyPressAnimation11, storeKeyPressAnimation11] = useState();
+const [keyPressAnimation12, storeKeyPressAnimation12] = useState();
+const [keyPressAnimation13, storeKeyPressAnimation13] = useState();
+const [keyPressAnimation14, storeKeyPressAnimation14] = useState();
+const [keyPressAnimation15, storeKeyPressAnimation15] = useState();
+const [keyPressAnimation16, storeKeyPressAnimation16] = useState();
   const [startMetronome, setStartMetronome] = useState(false);
   const [playButton, setPlayButton] = useState("/images/play-button.png")
   const [bpm, setBpm] = useState(375);
@@ -45,7 +61,7 @@ const [showModalValue, setShowModalValue] = useState(true);
       console.log("AFTER: ", startMetronome);
       var sampler = new Tone.Sampler(
         {
-          C3: "/samples/snare.wav"
+          C3: "/samples/metronome2.wav"
         },
         function timeout() {
           console.log("TIMER: ", timer);
@@ -76,6 +92,76 @@ const [showModalValue, setShowModalValue] = useState(true);
 
   //KEYPRESSES
 
+  const keyUp = e => {
+      if (e.key === "1") {
+      storeKeyPressAnimation("")
+  };
+
+  if (e.key === "2") {
+  storeKeyPressAnimation2("")
+};
+
+if (e.key === "3") {
+storeKeyPressAnimation3("")
+};
+
+if (e.key === "4") {
+storeKeyPressAnimation4("")
+};
+
+if (e.key === "q") {
+storeKeyPressAnimation5("")
+};
+
+if (e.key === "w") {
+storeKeyPressAnimation6("")
+};
+
+if (e.key === "e") {
+storeKeyPressAnimation7("")
+};
+
+if (e.key === "r") {
+storeKeyPressAnimation8("")
+};
+
+if (e.key === "a") {
+storeKeyPressAnimation9("")
+};
+
+if (e.key === "s") {
+storeKeyPressAnimation10("")
+};
+
+if (e.key === "d") {
+storeKeyPressAnimation11("")
+};
+
+if (e.key === "f") {
+storeKeyPressAnimation12("")
+};
+
+if (e.key === "z") {
+storeKeyPressAnimation13("")
+};
+
+if (e.key === "x") {
+storeKeyPressAnimation14("")
+};
+
+if (e.key === "c") {
+storeKeyPressAnimation15("")
+};
+
+if (e.key === "v") {
+storeKeyPressAnimation16("")
+};
+
+
+
+
+      }
+
   const keyPress = e => {
     if (e.key === "1") {
       var sampler = new Tone.Sampler(
@@ -83,7 +169,9 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/kick.wav"
         },
         function() {
+        storeKeyPressAnimation("key-press-animation")
           sampler.triggerAttack("C3");
+
         }
       ).chain(distortion, reverb, pitch, pingPong);
     }
@@ -95,6 +183,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/snare-g.wav"
         },
         function() {
+            storeKeyPressAnimation2("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -106,6 +195,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/clap.wav"
         },
         function() {
+            storeKeyPressAnimation3("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -117,6 +207,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/tom1.wav"
         },
         function() {
+            storeKeyPressAnimation4("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -128,6 +219,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/closehihat.wav"
         },
         function() {
+            storeKeyPressAnimation5("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -139,6 +231,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/openhihat.wav"
         },
         function() {
+            storeKeyPressAnimation6("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -150,6 +243,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/crash.wav"
         },
         function() {
+            storeKeyPressAnimation7("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -161,6 +255,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/ride.wav"
         },
         function() {
+            storeKeyPressAnimation8("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -172,6 +267,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/808.wav"
         },
         function() {
+            storeKeyPressAnimation9("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -183,6 +279,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/808-d.wav"
         },
         function() {
+            storeKeyPressAnimation10("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -194,6 +291,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/808-e.wav"
         },
         function() {
+            storeKeyPressAnimation11("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -205,6 +303,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/808-a.wav"
         },
         function() {
+            storeKeyPressAnimation12("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -216,6 +315,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/marcus-1.wav"
         },
         function() {
+            storeKeyPressAnimation13("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -227,6 +327,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/marcus-2.wav"
         },
         function() {
+            storeKeyPressAnimation14("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -238,6 +339,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/marcus-3.wav"
         },
         function() {
+            storeKeyPressAnimation15("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -249,6 +351,7 @@ const [showModalValue, setShowModalValue] = useState(true);
           C3: "/samples/marcus-4.wav"
         },
         function() {
+            storeKeyPressAnimation16("key-press-animation")
           sampler.triggerAttack("C3");
         }
       ).chain(distortion, reverb, pitch, pingPong);
@@ -472,6 +575,10 @@ const [showModalValue, setShowModalValue] = useState(true);
     document.onkeydown = keyPress;
   });
 
+  useEffect(() => {
+    document.onkeyup = keyUp;
+  });
+
   return (
     <React.Fragment>
       <div className="sampler-modal">
@@ -479,52 +586,53 @@ const [showModalValue, setShowModalValue] = useState(true);
         <div className="pad-container">
 
                         <div
-                            onClick={playSample1}
+                            onClick={playSample1} id={keyPressAnimation}
                             className={["pad1", "sampler-pad1"].join(" ")}
                         ><h3>1</h3></div>
-                        <div onClick={playSample2}  className={["pad2", "sampler-pad1"].join(" ")}>
+
+                        <div onClick={playSample2} id={keyPressAnimation2}  className={["pad2", "sampler-pad1", {keyPressAnimation}].join(" ")}>
                             <h3>2</h3>
                         </div>
-                        <div onClick={playSample3} className={["pad3", "sampler-pad1"].join(" ")}>
+                        <div onClick={playSample3} id={keyPressAnimation3} className={["pad3", "sampler-pad1"].join(" ")}>
                             <h3>3</h3>
                         </div>
-                        <div onClick={playSample4} className={["pad4", "sampler-pad1"].join(" ")}>
+                        <div onClick={playSample4} id={keyPressAnimation4} className={["pad4", "sampler-pad1"].join(" ")}>
                             <h3>4</h3>
                         </div>
-                        <div onClick={playSample5} onClick={playSample1} className={["pad5", "sampler-pad2"].join(" ")}>
+                        <div onClick={playSample5} id={keyPressAnimation5} onClick={playSample1} className={["pad5", "sampler-pad2"].join(" ")}>
                             <h3>Q</h3>
                         </div>
-                        <div onClick={playSample6} className={["pad6", "sampler-pad2"].join(" ")}>
+                        <div onClick={playSample6} id={keyPressAnimation6} className={["pad6", "sampler-pad2"].join(" ")}>
                             <h3>W</h3>
                         </div>
-                        <div onClick={playSample7} onClick={playSample1} className={["pad7", "sampler-pad2"].join(" ")}>
+                        <div onClick={playSample7} id={keyPressAnimation7} onClick={playSample1} className={["pad7", "sampler-pad2"].join(" ")}>
                             <h3>E</h3>
                         </div>
-                        <div onClick={playSample8} className={["pad8", "sampler-pad2"].join(" ")}>
+                        <div onClick={playSample8} id={keyPressAnimation8} className={["pad8", "sampler-pad2"].join(" ")}>
                             <h3>R</h3>
                         </div>
-                        <div onClick={playSample9} className={["pad9", "sampler-pad3"].join(" ")}>
+                        <div onClick={playSample9} id={keyPressAnimation9} className={["pad9", "sampler-pad3"].join(" ")}>
                             <h3>A</h3>
                         </div>
-                        <div onClick={playSample10} className={["pad10", "sampler-pad3"].join(" ")}>
+                        <div onClick={playSample10} id={keyPressAnimation10} className={["pad10", "sampler-pad3"].join(" ")}>
                             <h3>S</h3>
                         </div>
-                        <div onClick={playSample11} className={["pad11", "sampler-pad3"].join(" ")}>
+                        <div onClick={playSample11} id={keyPressAnimation11} className={["pad11", "sampler-pad3"].join(" ")}>
                             <h3>D</h3>
                         </div>
-                        <div onClick={playSample12} className={["pad12", "sampler-pad3"].join(" ")}>
+                        <div onClick={playSample12} id={keyPressAnimation12} className={["pad12", "sampler-pad3"].join(" ")}>
                             <h3>F</h3>
                         </div>
-                        <div onClick={playSample13} className={["pad13", "sampler-pad4"].join(" ")}>
+                        <div onClick={playSample13} id={keyPressAnimation13} className={["pad13", "sampler-pad4"].join(" ")}>
                             <h3>Z</h3>
                         </div>
-                        <div onClick={playSample14} className={["pad14", "sampler-pad4"].join(" ")}>
+                        <div onClick={playSample14} id={keyPressAnimation14} className={["pad14", "sampler-pad4"].join(" ")}>
                             <h3>X</h3>
                         </div>
-                        <div onClick={playSample15} className={["pad15", "sampler-pad4"].join(" ")}>
+                        <div onClick={playSample15} id={keyPressAnimation15} className={["pad15", "sampler-pad4"].join(" ")}>
                             <h3>C</h3>
                         </div>
-                        <div onClick={playSample16} className={["pad16", "sampler-pad4"].join(" ")}>
+                        <div onClick={playSample16} id={keyPressAnimation16} className={["pad16", "sampler-pad4"].join(" ")}>
                             <h3>V</h3>
                         </div>
                     </div>

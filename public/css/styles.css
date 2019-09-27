@@ -122,14 +122,12 @@ transform: scale(0);
 }
 
 .tour-dates-container-hide {
-/* visibility: hidden; */
-/* grid-column-start: 2;
+visibility: hidden;
+grid-column-start: 2;
 grid-column-end: 26;
 grid-row-start: 5;
-grid-row-end: 18; */
-position: absolute;
-top: -82px;
-left: 953px;
+grid-row-end: 18;
+
 background-color: #81c9b8;
 z-index: 100;
 margin-left: 2px;
@@ -584,7 +582,7 @@ animation-name: tourdates;
 .sampler-opener-text h2 {
     font-weight: 400;
     font-family: din-2014, sans-serif;
-    font-size: 2rem;
+    font-size: 2.8rem;
     letter-spacing: 0.2em;
     margin-left: 50px;
     margin-right: 32px;
@@ -600,7 +598,7 @@ animation-name: tourdates;
         font-family: din-2014, sans-serif;
         letter-spacing: 0.1rem;
         font-weight: 500;
-        font-size: 4.5rem;
+        font-size: 4.3rem;
         margin-top: -20px;
         margin-left: 18px;
         color: #292729;
@@ -784,8 +782,9 @@ animation-name: tourdates;
 
 @keyframes tourdates-hide {
   from {
-    transform: scale(1) translate(-550px, 300px);
-    transform-origin: bottom left;
+    transform:  translate(20px, 800px);
+    transform: scale(1);
+    transform-origin: top right;
   }
   to {
     transform: scale(0);
@@ -1118,8 +1117,24 @@ input[type="range"]:focus::-ms-fill-upper {
   z-index: 500;
 }
 
-.sampler-pad:active {
-  top: 0.1em;
+.sampler-pad1:active {
+  top: 0.2em;
+}
+
+.sampler-pad2:active {
+  top: 0.2em;
+}
+
+.sampler-pad3:active {
+  top: 0.2em;
+}
+
+.sampler-pad4:active {
+  top: 0.2em;
+}
+
+#key-press-animation {
+  top: 0.2em;
 }
 
 @media all and (max-width: 30em) {
