@@ -4,7 +4,9 @@ import Tone from "tone";
 
 export default function App() {
   const [showModalValue, setShowModalValue] = useState(false);
-  const [showModalTourValue, setShowModalTourValue] = useState(false);
+  const [showModalTourValue, setShowModalTourValue] = useState(true);
+  const [expandIconClass, setExpandIconClass] = useState("open-tour-dates-modal");
+  const [showHideTourDates, setShowHideTourDates] = useState("tour-dates-container-default")
   const [bpm, setBpm] = useState();
   const [musicPlayer0, setMusicPlayer0] = useState("musicPlayer0");
   const [musicPlayer01, setMusicPlayer01] = useState("music-player1");
@@ -23,12 +25,28 @@ export default function App() {
     }
   };
 
+  // const showModalTour = function() {
+  //   if (showModalTourValue === false) {
+  //     setShowModalTourValue(true);
+  // } else if (showModalTourValue === true) {
+  //     setShowModalTourValue(false);
+  //   }
+  // };
+
   const showModalTour = function() {
-    if (showModalTourValue === false) {
-      setShowModalTourValue(true);
-  } else if (showModalTourValue === true) {
-      setShowModalTourValue(false);
-    }
+    if (showHideTourDates === "tour-dates-container-default") {
+     setShowHideTourDates("tour-dates-container");
+  } else if (showHideTourDates === "tour-dates-container") {
+      setShowHideTourDates("tour-dates-container-hide");
+  } else if (showHideTourDates === "tour-dates-container-hide") {
+        setShowHideTourDates("tour-dates-container");
+      }
+
+      if (expandIconClass === "open-tour-dates-modal") {
+       setExpandIconClass("open-tour-dates-modal-rotate");
+   } else if (expandIconClass === "open-tour-dates-modal-rotate") {
+     setExpandIconClass("open-tour-dates-modal");
+ }
   };
 
   const swapMPlayerRight = e => {
@@ -340,7 +358,7 @@ export default function App() {
         <header></header>
 
         {showModalTourValue && (
-        <div className="tour-dates-container">
+        <div className={showHideTourDates}>
 
           <p>31 SEPTEMBER</p>
           <p>Brudenell Social Club</p>
@@ -421,7 +439,7 @@ export default function App() {
         </div>
         <div className="tour-dates-expand">
           <img
-            className="open-tour-dates-modal"
+            className={expandIconClass}
             onClick={showModalTour}
             src="/images/expand.png"
           />
@@ -454,7 +472,10 @@ export default function App() {
         </div>
 
         <div className="logo-container">
-          <h1 className="logo">ALGERNON CORNELIUS</h1>
+        <img className="logo"
+
+          src="/images/logo.png"
+        />
         </div>
 
 

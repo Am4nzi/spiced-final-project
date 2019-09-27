@@ -480,51 +480,51 @@ const [showModalValue, setShowModalValue] = useState(true);
 
                         <div
                             onClick={playSample1}
-                            className={["pad1", "sampler-pad"].join(" ")}
+                            className={["pad1", "sampler-pad1"].join(" ")}
                         ><h3>1</h3></div>
-                        <div onClick={playSample2}  className={["pad2", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample2}  className={["pad2", "sampler-pad1"].join(" ")}>
                             <h3>2</h3>
                         </div>
-                        <div onClick={playSample3} className={["pad3", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample3} className={["pad3", "sampler-pad1"].join(" ")}>
                             <h3>3</h3>
                         </div>
-                        <div onClick={playSample4} className={["pad4", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample4} className={["pad4", "sampler-pad1"].join(" ")}>
                             <h3>4</h3>
                         </div>
-                        <div onClick={playSample5} onClick={playSample1} className={["pad5", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample5} onClick={playSample1} className={["pad5", "sampler-pad2"].join(" ")}>
                             <h3>Q</h3>
                         </div>
-                        <div onClick={playSample6} className={["pad6", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample6} className={["pad6", "sampler-pad2"].join(" ")}>
                             <h3>W</h3>
                         </div>
-                        <div onClick={playSample7} onClick={playSample1} className={["pad7", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample7} onClick={playSample1} className={["pad7", "sampler-pad2"].join(" ")}>
                             <h3>E</h3>
                         </div>
-                        <div onClick={playSample8} className={["pad8", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample8} className={["pad8", "sampler-pad2"].join(" ")}>
                             <h3>R</h3>
                         </div>
-                        <div onClick={playSample9} className={["pad9", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample9} className={["pad9", "sampler-pad3"].join(" ")}>
                             <h3>A</h3>
                         </div>
-                        <div onClick={playSample10} className={["pad10", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample10} className={["pad10", "sampler-pad3"].join(" ")}>
                             <h3>S</h3>
                         </div>
-                        <div onClick={playSample11} className={["pad11", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample11} className={["pad11", "sampler-pad3"].join(" ")}>
                             <h3>D</h3>
                         </div>
-                        <div onClick={playSample12} className={["pad12", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample12} className={["pad12", "sampler-pad3"].join(" ")}>
                             <h3>F</h3>
                         </div>
-                        <div onClick={playSample13} className={["pad13", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample13} className={["pad13", "sampler-pad4"].join(" ")}>
                             <h3>Z</h3>
                         </div>
-                        <div onClick={playSample14} className={["pad14", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample14} className={["pad14", "sampler-pad4"].join(" ")}>
                             <h3>X</h3>
                         </div>
-                        <div onClick={playSample15} className={["pad15", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample15} className={["pad15", "sampler-pad4"].join(" ")}>
                             <h3>C</h3>
                         </div>
-                        <div onClick={playSample16} className={["pad16", "sampler-pad"].join(" ")}>
+                        <div onClick={playSample16} className={["pad16", "sampler-pad4"].join(" ")}>
                             <h3>V</h3>
                         </div>
                     </div>
