@@ -53,18 +53,14 @@ const [keyPressAnimation16, storeKeyPressAnimation16] = useState();
   }).toMaster();
 
   const snareLoop = e => {
-    console.log("BPM in snareLoop", bpm);
-    console.log("BEFORE: ", startMetronome);
     if (startMetronome === false) {
       setStartMetronome(true);
       setPlayButton("/images/stop.png")
-      console.log("AFTER: ", startMetronome);
       var sampler = new Tone.Sampler(
         {
           C3: "/samples/metronome2.wav"
         },
         function timeout() {
-          console.log("TIMER: ", timer);
           setTimer(
             setTimeout(function() {
               sampler.triggerAttack("C3");
@@ -74,7 +70,6 @@ const [keyPressAnimation16, storeKeyPressAnimation16] = useState();
         }
       ).toMaster();
   } else if (startMetronome === true) {
-      console.log("TIMER: ", timer);
       clearTimeout(timer);
       setStartMetronome(false);
       setPlayButton("/images/play-button.png")
@@ -157,9 +152,6 @@ if (e.key === "v") {
 storeKeyPressAnimation16("")
 };
 
-
-
-
       }
 
   const keyPress = e => {
@@ -177,7 +169,6 @@ storeKeyPressAnimation16("")
     }
 
     if (e.key === "2") {
-      console.log(reverbValue);
       var sampler = new Tone.Sampler(
         {
           C3: "/samples/snare-g.wav"
@@ -264,7 +255,7 @@ storeKeyPressAnimation16("")
     if (e.key === "a") {
       var sampler = new Tone.Sampler(
         {
-          C3: "/samples/808.wav"
+          C3: "/samples/marcus-1.wav"
         },
         function() {
             storeKeyPressAnimation9("key-press-animation")
@@ -276,7 +267,7 @@ storeKeyPressAnimation16("")
     if (e.key === "s") {
       var sampler = new Tone.Sampler(
         {
-          C3: "/samples/808-d.wav"
+          C3: "/samples/marcus-2.wav"
         },
         function() {
             storeKeyPressAnimation10("key-press-animation")
@@ -288,7 +279,7 @@ storeKeyPressAnimation16("")
     if (e.key === "d") {
       var sampler = new Tone.Sampler(
         {
-          C3: "/samples/808-e.wav"
+          C3: "/samples/marcus-3.wav"
         },
         function() {
             storeKeyPressAnimation11("key-press-animation")
@@ -300,7 +291,7 @@ storeKeyPressAnimation16("")
     if (e.key === "f") {
       var sampler = new Tone.Sampler(
         {
-          C3: "/samples/808-a.wav"
+          C3: "/samples/marcus-4.wav"
         },
         function() {
             storeKeyPressAnimation12("key-press-animation")
@@ -312,7 +303,7 @@ storeKeyPressAnimation16("")
     if (e.key === 'z') {
       var sampler = new Tone.Sampler(
         {
-          C3: "/samples/marcus-1.wav"
+          C3: "/samples/marcus-5.wav"
         },
         function() {
             storeKeyPressAnimation13("key-press-animation")
@@ -324,7 +315,7 @@ storeKeyPressAnimation16("")
     if (e.key === 'x') {
       var sampler = new Tone.Sampler(
         {
-          C3: "/samples/marcus-2.wav"
+          C3: "/samples/marcus-6.wav"
         },
         function() {
             storeKeyPressAnimation14("key-press-animation")
@@ -336,7 +327,7 @@ storeKeyPressAnimation16("")
     if (e.key === 'c') {
       var sampler = new Tone.Sampler(
         {
-          C3: "/samples/marcus-3.wav"
+          C3: "/samples/marcus-7.wav"
         },
         function() {
             storeKeyPressAnimation15("key-press-animation")
@@ -348,7 +339,7 @@ storeKeyPressAnimation16("")
     if (e.key === 'v') {
       var sampler = new Tone.Sampler(
         {
-          C3: "/samples/marcus-4.wav"
+          C3: "/samples/marcus-8.wav"
         },
         function() {
             storeKeyPressAnimation16("key-press-animation")
@@ -365,29 +356,23 @@ storeKeyPressAnimation16("")
   const onUserChange = e => {
     setBpm(parseInt(e.target.value, 10) * 4.69);
     setShowBpm(String(240 - e.target.value));
-    console.log("HI", e.target.value);
 
-    console.log(parseInt(e.target.value, 10) * 4.69);
   };
 
   const onUserChangeDistortion = e => {
     setDistortionValue(parseInt(e.target.value, 10) / 10);
-    console.log("DISTORTION: ", parseInt(e.target.value, 10) / 10);
   };
 
   const onUserChangeReverb = e => {
     setReverbValue(parseInt(e.target.value, 10) / 10);
-    console.log("REVERB: ", parseInt(e.target.value, 10) / 10);
   };
 
   const onUserChangePitch = e => {
     setPitchValue(parseInt(e.target.value, 10));
-    console.log("pitchValue: ", parseInt(e.target.value, 10));
   };
 
   const onUserChangePingPong = e => {
     setPingPongValue(parseInt(e.target.value, 10) / 10);
-    console.log("pingPong value: ", parseInt(e.target.value, 10) / 10);
   };
 
     const playSample1 = e => {
@@ -481,7 +466,7 @@ storeKeyPressAnimation16("")
     const playSample9 = e => {
         var sampler = new Tone.Sampler(
           {
-            C3: "/samples/808.wav"
+            C3: "/samples/marcus-1.wav"
           },
           function() {
             sampler.triggerAttack("C3");
@@ -492,7 +477,7 @@ storeKeyPressAnimation16("")
     const playSample10 = e => {
         var sampler = new Tone.Sampler(
           {
-            C3: "/samples/808-a.wav"
+            C3: "/samples/marcus-2.wav"
           },
           function() {
             sampler.triggerAttack("C3");
@@ -503,7 +488,7 @@ storeKeyPressAnimation16("")
     const playSample11 = e => {
         var sampler = new Tone.Sampler(
           {
-            C3: "/samples/808-d.wav"
+            C3: "/samples/marcus-3.wav"
           },
           function() {
             sampler.triggerAttack("C3");
@@ -514,7 +499,7 @@ storeKeyPressAnimation16("")
     const playSample12 = e => {
         var sampler = new Tone.Sampler(
           {
-            C3: "/samples/808-e.wav"
+            C3: "/samples/marcus-4.wav"
           },
           function() {
             sampler.triggerAttack("C3");
@@ -525,7 +510,7 @@ storeKeyPressAnimation16("")
     const playSample13 = e => {
         var sampler = new Tone.Sampler(
           {
-            C3: "/samples/marcus-1.wav"
+            C3: "/samples/marcus-5.wav"
           },
           function() {
             sampler.triggerAttack("C3");
@@ -536,7 +521,7 @@ storeKeyPressAnimation16("")
     const playSample14 = e => {
         var sampler = new Tone.Sampler(
           {
-            C3: "/samples/marcus-2.wav"
+            C3: "/samples/marcus-6.wav"
           },
           function() {
             sampler.triggerAttack("C3");
@@ -547,7 +532,7 @@ storeKeyPressAnimation16("")
     const playSample15 = e => {
         var sampler = new Tone.Sampler(
           {
-            C3: "/samples/marcus-3.wav"
+            C3: "/samples/marcus-7.wav"
           },
           function() {
             sampler.triggerAttack("C3");
@@ -558,7 +543,7 @@ storeKeyPressAnimation16("")
     const playSample16 = e => {
         var sampler = new Tone.Sampler(
           {
-            C3: "/samples/marcus-4.wav"
+            C3: "/samples/marcus-8.wav"
           },
           function() {
             sampler.triggerAttack("C3");
@@ -567,8 +552,6 @@ storeKeyPressAnimation16("")
     };
 
   useEffect(() => {
-    console.log("useEffect is running");
-    console.log("bpm in useeffect", bpm);
   }, []);
 
   useEffect(() => {
@@ -599,13 +582,13 @@ storeKeyPressAnimation16("")
                         <div onClick={playSample4} id={keyPressAnimation4} className={["pad4", "sampler-pad1"].join(" ")}>
                             <h3>4</h3>
                         </div>
-                        <div onClick={playSample5} id={keyPressAnimation5} onClick={playSample1} className={["pad5", "sampler-pad2"].join(" ")}>
+                        <div onClick={playSample5} id={keyPressAnimation5} className={["pad5", "sampler-pad2"].join(" ")}>
                             <h3>Q</h3>
                         </div>
                         <div onClick={playSample6} id={keyPressAnimation6} className={["pad6", "sampler-pad2"].join(" ")}>
                             <h3>W</h3>
                         </div>
-                        <div onClick={playSample7} id={keyPressAnimation7} onClick={playSample1} className={["pad7", "sampler-pad2"].join(" ")}>
+                        <div onClick={playSample7} id={keyPressAnimation7} className={["pad7", "sampler-pad2"].join(" ")}>
                             <h3>E</h3>
                         </div>
                         <div onClick={playSample8} id={keyPressAnimation8} className={["pad8", "sampler-pad2"].join(" ")}>
@@ -650,6 +633,7 @@ storeKeyPressAnimation16("")
         <div className="set-bpm">
           <input
             onChange={onUserChange}
+            defaultValue="160"
             type="range"
             name="points"
             min="80"
@@ -660,6 +644,7 @@ storeKeyPressAnimation16("")
         <div className="set-distortion">
           <input
             onChange={onUserChangeDistortion}
+            defaultValue="0"
             type="range"
             name="points"
             min="0"
@@ -670,6 +655,7 @@ storeKeyPressAnimation16("")
         <div className="set-reverb">
           <input
             onChange={onUserChangeReverb}
+            defaultValue="0"
             type="range"
             name="points"
             min="0"
@@ -680,9 +666,10 @@ storeKeyPressAnimation16("")
         <div className="set-pitch">
           <input
             onChange={onUserChangePitch}
+            defaultValue="-40"
             type="range"
             name="points"
-            min="-80"
+            min="-40"
             max="40"
           />
         </div>
@@ -690,6 +677,7 @@ storeKeyPressAnimation16("")
         <div className="set-pingpong">
           <input
             onChange={onUserChangePingPong}
+            defaultValue="0"
             type="range"
             name="points"
             min="0"
