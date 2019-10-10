@@ -13,21 +13,21 @@ body {
 }
 
 h3 {
-    color: #292729;
+  color: #292729;
 }
 
 #body-wrapper {
-    margin-top: 30px;
-        margin-bottom: 50px;
-        display: grid;
-        grid-template-columns: repeat(26, 48px);
-        grid-template-rows: repeat(18, 48px);
-        background-image: url(https://s3.amazonaws.com/spicedling/ti_XjRYzwmxq9xdeHIW0OlzXrG2mkAQX.svg);
-        background-repeat: repeat;
-        background-size: 48px 48px;
-        width: 100.2%;
-        height: 233%;
-        border-bottom: 2px solid #231F20;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(26, 48px);
+  grid-template-rows: repeat(18, 48px);
+  background-image: url(https://s3.amazonaws.com/spicedling/ti_XjRYzwmxq9xdeHIW0OlzXrG2mkAQX.svg);
+  background-repeat: repeat;
+  background-size: 48px 48px;
+  width: 100.2%;
+  height: 233%;
+  border-bottom: 2px solid #231f20;
 }
 
 header {
@@ -56,140 +56,112 @@ header {
 }
 
 .box {
-    grid-column-start: 16;
-       grid-column-end: 22;
-       grid-row-start: 6;
-       grid-row-end: 15;
-       background-color: #81c9b8;
-       margin-top: 2px;
-       margin-left: 2px;
-   }
-
-
-.box02 {
-    grid-column-start: 20;
-   grid-column-end: 26;
-   grid-row-start: 8;
-   grid-row-end: 17;
-   background-color: #81c9b8;
-   /* height: 93%; */
-   margin-top: 2px;
-   margin-left: 2px;
+  grid-column-start: 16;
+  grid-column-end: 22;
+  grid-row-start: 6;
+  grid-row-end: 15;
+  background-color: #81c9b8;
+  margin-top: 2px;
+  margin-left: 2px;
 }
 
-/* .tour-dates-container {
-    grid-column-start: 2;
-grid-column-end: 26;
-grid-row-start: 5;
-grid-row-end: 18;
-background-color: #81c9b8;
-z-index: 100;
-margin-left: 2px;
-margin-top: 2px;
-display: grid;
-grid-template-rows: repeat(1, 48px);
-grid-auto-rows: 48px;
-grid-template-columns: 180px 400px 379px 168px;
--webkit-animation-duration: 1s;
-animation-duration: 1s;
--webkit-animation-fill-mode: both;
-animation-fill-mode: both;
--webkit-animation-name: tourdates;
-animation-name: tourdates;
-} */
+.box02 {
+  grid-column-start: 20;
+  grid-column-end: 26;
+  grid-row-start: 8;
+  grid-row-end: 17;
+  background-color: #81c9b8;
+  /* height: 93%; */
+  margin-top: 2px;
+  margin-left: 2px;
+}
 
 .tour-dates-container-default {
-/* visibility: hidden; */
-grid-column-start: 2;
-grid-column-end: 26;
-grid-row-start: 5;
-grid-row-end: 18;
-background-color: #81c9b8;
-z-index: 100;
-margin-left: 2px;
-margin-top: 2px;
-display: grid;
-grid-template-rows: repeat(1, 48px);
-grid-auto-rows: 48px;
-grid-template-columns: 180px 400px 379px 168px;
-/* -webkit-animation-duration: 1s;
+  /* visibility: hidden; */
+  grid-column-start: 2;
+  grid-column-end: 26;
+  grid-row-start: 5;
+  grid-row-end: 18;
+  background-color: #81c9b8;
+  z-index: 100;
+  margin-left: 2px;
+  margin-top: 2px;
+  display: grid;
+  grid-template-rows: repeat(1, 48px);
+  grid-auto-rows: 48px;
+  grid-template-columns: 180px 400px 379px 168px;
+  /* -webkit-animation-duration: 1s;
 animation-duration: 1s;
 -webkit-animation-fill-mode: both;
 animation-fill-mode: both;
 -webkit-animation-name: tourdates;
 animation-name: tourdates; */
-transform: scale(0);
+  transform: scale(0);
 }
 
 .tour-dates-container-hide {
-visibility: hidden;
-grid-column-start: 2;
-grid-column-end: 26;
-grid-row-start: 5;
-grid-row-end: 18;
+  visibility: hidden;
+  grid-column-start: 2;
+  grid-column-end: 26;
+  grid-row-start: 5;
+  grid-row-end: 18;
 
-background-color: #81c9b8;
-z-index: 100;
-margin-left: 2px;
-margin-top: 2px;
-display: grid;
-grid-template-rows: repeat(1, 48px);
-grid-auto-rows: 48px;
-grid-template-columns: 180px 400px 379px 168px;
--webkit-animation-duration: 1s;
-animation-duration: 1s;
--webkit-animation-fill-mode: both;
-animation-fill-mode: both;
--webkit-animation-name: tourdates-hide;
-animation-name: tourdates-hide;
-
+  background-color: #81c9b8;
+  z-index: 100;
+  margin-left: 2px;
+  margin-top: 2px;
+  display: grid;
+  grid-template-rows: repeat(1, 48px);
+  grid-auto-rows: 48px;
+  grid-template-columns: 180px 400px 379px 168px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: tourdates-hide;
+  animation-name: tourdates-hide;
 }
-
 
 .tour-dates-container {
-    visibility: visible;
-grid-column-start: 2;
-grid-column-end: 26;
-grid-row-start: 5;
-grid-row-end: 18;
-background-color: #81c9b8;
-z-index: 100;
-margin-left: 2px;
-margin-top: 2px;
-display: grid;
-grid-template-rows: repeat(1, 48px);
-grid-auto-rows: 48px;
-grid-template-columns: 180px 400px 379px 168px;
--webkit-animation-duration: 1s;
-animation-duration: 1s;
--webkit-animation-fill-mode: both;
-animation-fill-mode: both;
--webkit-animation-name: tourdates;
-animation-name: tourdates;
+  visibility: visible;
+  grid-column-start: 2;
+  grid-column-end: 26;
+  grid-row-start: 5;
+  grid-row-end: 18;
+  background-color: #81c9b8;
+  z-index: 100;
+  margin-left: 2px;
+  margin-top: 2px;
+  display: grid;
+  grid-template-rows: repeat(1, 48px);
+  grid-auto-rows: 48px;
+  grid-template-columns: 180px 400px 379px 168px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: tourdates;
+  animation-name: tourdates;
 }
-
 
 .tour-dates-container > p {
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    font-family: din-2014, sans-serif;
-    margin: 0;
-    align-self: center;
-    margin-left: 15px;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-family: din-2014, sans-serif;
+  margin: 0;
+  align-self: center;
+  margin-left: 15px;
 }
 
-
-
 .get-tickets {
-    justify-self: right;
-    text-decoration: underline;
-    cursor: pointer;
+  justify-self: right;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .city {
-    justify-self: right;
+  justify-self: right;
 }
-
 
 .video-wrapper {
   width: 626px;
@@ -211,166 +183,192 @@ animation-name: tourdates;
   bottom: 0;
 }
 
-.music-playera {
-  border: 0;
-  height: 433px;
-  width: 290px;
-  grid-column-start: 16;
-  grid-column-end: 26;
-  grid-row-start: 7;
-  z-index: -5;
-}
-
-.music-player-3 {
-  border: 0;
-  height: 433px;
-  width: 290px;
+.albums-wrapper {
   grid-column-start: 16;
   grid-column-end: 26;
   grid-row-start: 6;
-  z-index: -20;
+  grid-row-end: 17;
+  display: grid;
+  grid-template-columns: repeat(11, 48px);
+  grid-template-rows: repeat(11, 48px);
 }
 
-.music-player-2 {
-  border: 0;
-  height: 430px;
-  width: 290px;
-  grid-column-start: 16;
-  grid-column-end: 26;
+.next-album {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 10;
+  background-color: black;
+  z-index: 10;
+  opacity: 0.45;
+  width: 100.8%;
+  
+}
+
+.prev-album-arrow {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 10;
+  z-index: 11;
+  width: 42px;
+  transform: rotate(180deg);
+  opacity: 0.85;
+  margin-left: 3px;
+}
+
+.prev-album {
+  grid-column-start: 5;
+  grid-column-end: 11;
+  grid-row-start: 3;
+  grid-row-end: 12;
+  background-color: black;
+  z-index: 11;
+  /* width: 1px; */
+  margin-top: 3px;
+  margin-left: 6px;
+  opacity: 0;
+}
+
+.next-album-arrow {
+  grid-column-start: 10;
+  grid-column-end: 10;
   grid-row-start: 6;
-  z-index: -20;
-  /* opacity: 0.5; */
+  grid-row-end: 6;
+  z-index: 11;
+  width: 42px;
+  margin-top: 3px;
+  margin-left: 6px;
+  opacity: 0.85;
 }
 
-.music-player-1 {
+.album-position0 {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 6;
   border: 0;
   height: 433px;
   width: 290px;
-  grid-column-start: 16;
-  grid-column-end: 26;
-  grid-row-start: 6;
-  z-index: -20;
-  /* opacity: 0.5; */
-}
-
-.music-player0 {
-  border: 0;
-  height: 433px;
-  width: 290px;
-  grid-column-start: 16;
-  grid-column-end: 26;
-  grid-row-start: 6;
-  z-index: -20;
-  /* opacity: 0.5; */
-}
-
-.music-player1 {
-    border: 0;
-    height: 433px;
-    width: 290px;
-    grid-column-start: 16;
-    grid-column-end: 26;
-    grid-row-start: 6;
-    z-index: 3;
-    opacity: 0.6;
-    margin-top: 2px;
-    margin-left: 2px;
-}
-
-.music-player2l {
-  border: 0;
-  height: 433px;
-  width: 290px;
-  grid-column-start: 18;
-  grid-column-end: 26;
-  grid-row-start: 7;
-  z-index: 9;
+  z-index: 8;
   margin-top: 2px;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
+  filter: blur(1px);
 }
 
-.music-player2r {
+.album-position1 {
+  grid-column-start: 3;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 7;
   border: 0;
   height: 433px;
   width: 290px;
-  grid-column-start: 18;
-  grid-column-end: 26;
-  grid-row-start: 7;
-  z-index: 9;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeInRight;
-  animation-name: fadeInRight;
+  z-index: 11;
   margin-top: 2px;
 }
 
-.music-player3 {
-    border: 0;    grid-column-start: 20;
-    grid-column-end: 26;
-    grid-row-start: 10;
-    grid-row-end: 19;
-    background-color: #81c9b8;
-    width: 99%;
-    /* height: 93%; */
-    margin-top: 2px;
-    margin-left: 2px;
-        height: 430px;
-        width: 286px;
-        grid-column-start: 20;
-        grid-column-end: 26;
-        grid-row-start: 8;
-        z-index: 3;
-        opacity: 0.6;
-        margin-top: 2px;
-    }
-
-
-.music-player4 {
+.album-position2 {
+  grid-column-start: 5;
+  grid-column-end: 12;
+  grid-row-start: 3;
+  grid-row-end: 8;
   border: 0;
   height: 433px;
   width: 290px;
-  grid-column-start: 16;
-  grid-column-end: 26;
-  grid-row-start: 6;
-  z-index: -5;
+  z-index: 9;
+  margin-top: 2px;
+  filter: brightness(71%) blur(1px);
 }
 
-
-.music-player5 {
+.album-position3 {
+  grid-column-start: 5;
+  grid-column-end: 12;
+  grid-row-start: 3;
+  grid-row-end: 8;
   border: 0;
   height: 433px;
   width: 290px;
-  grid-column-start: 16;
-  grid-column-end: 26;
-  grid-row-start: 6;
-  z-index: -5;
+  z-index: -100;
+  margin-top: 2px;
 }
 
-.music-player6 {
+.album-position4 {
+  grid-column-start: 5;
+  grid-column-end: 12;
+  grid-row-start: 3;
+  grid-row-end: 8;
   border: 0;
   height: 433px;
   width: 290px;
-  grid-column-start: 16;
-  grid-column-end: 26;
-  grid-row-start: 6;
-  z-index: -5;
+  z-index: -100;
+  margin-top: 2px;
 }
 
-.music-player7 {
+.album-pre-position {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 6;
   border: 0;
   height: 433px;
   width: 290px;
-  grid-column-start: 16;
-  grid-column-end: 26;
-  grid-row-start: 6;
-  z-index: -5;
+  z-index: 8;
+  margin-top: 2px;
+}
+
+.albums-active-position {
+  grid-column-start: 3;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 7;
+  border: 0;
+  height: 433px;
+  width: 290px;
+  z-index: 9;
+  margin-top: 2px;
+}
+
+.albums-post-position {
+  grid-column-start: 5;
+  grid-column-end: 12;
+  grid-row-start: 3;
+  grid-row-end: 8;
+  border: 0;
+  height: 433px;
+  width: 290px;
+  z-index: 8;
+  margin-top: 2px;
+}
+
+.arrow {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in 0.1s;
+}
+
+.backArrow {
+  grid-column-end: 16;
+  grid-row-end: 11;
+  z-index: 999;
+  color: #fff;
+}
+
+.nextArrow {
+  grid-column-end: 27;
+  grid-row-end: 11;
+  z-index: 999;
+  color: #fff;
+}
+
+.fa-arrow-right:before,
+.fa-arrow-left:before {
+  color: #222;
 }
 
 .mpc-wrapper {
@@ -429,12 +427,10 @@ animation-name: tourdates;
   font-weight: 400;
   margin-left: 21px;
   margin-bottom: 4px;
-
 }
 
-
 .tour-dates p {
-     font-family: din-2014, sans-serif;
+  font-family: din-2014, sans-serif;
   font-size: 1rem;
   letter-spacing: 0.3em;
   font-weight: 400;
@@ -470,26 +466,26 @@ animation-name: tourdates;
 }
 
 .tour-dates-expand {
-    grid-column-start: 25;
-    grid-column-end: 26;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-column-start: 25;
+  grid-column-end: 26;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .see-all-dates {
-    grid-column-start: 20;
-    grid-column-end: 26;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    background-color: #81c9b8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2px;
-    margin-left: 2px;
+  grid-column-start: 20;
+  grid-column-end: 26;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-color: #81c9b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  margin-left: 2px;
 }
 
 .see-all-dates p {
@@ -535,14 +531,14 @@ animation-name: tourdates;
 }
 
 .sampler-modal {
-    background-image: url("/images/noise.png");
-    background-repeat: repeat;
+  background-image: url("/images/noise.png");
+  background-repeat: repeat;
   display: grid;
   grid-template-columns: repeat(22, 48px);
   grid-template-rows: repeat(10, 48px);
   /* background-image: url("https://s3.amazonaws.com/spicedling/ti_XjRYzwmxq9xdeHIW0OlzXrG2mkAQX.svg");
-    background-repeat: repeat;
-    background-size: 48px 48px; */
+  background-repeat: repeat;
+  background-size: 48px 48px; */
   padding: 38px;
   height: 80.4%;
 }
@@ -557,52 +553,46 @@ animation-name: tourdates;
   margin-top: 2px;
   margin-left: 2px;
   display: flex;
-    justify-content: center;
-    align-items: center;
-
+  justify-content: center;
+  align-items: center;
 }
 
 .sampler-opener-text {
-    grid-column-start: 6;
-       grid-column-end: 15;
-       grid-row-start: 13;
-       grid-row-end: 17;
-       display: flex;
-       justify-content: center;
-       align-items: center;
+  grid-column-start: 6;
+  grid-column-end: 15;
+  grid-row-start: 13;
+  grid-row-end: 17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-       background-color: #81c9b8;
-       height: 99%;
-       margin-top: 2px;
-       margin-left: 2px;
-
-
+  background-color: #81c9b8;
+  height: 99%;
+  margin-top: 2px;
+  margin-left: 2px;
 }
 
 .sampler-opener-text h2 {
-    font-weight: 400;
-    font-family: din-2014, sans-serif;
-    font-size: 2.8rem;
-    letter-spacing: 0.2em;
-    margin-left: 50px;
-    margin-right: 32px;
-
-
+  font-weight: 400;
+  font-family: din-2014, sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.2em;
+  margin-left: 50px;
+  margin-right: 32px;
 }
 
 .sampler-modal h1 {
-    grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 1;
-        grid-row-end: 1;
-        font-family: din-2014, sans-serif;
-        letter-spacing: 0.1rem;
-        font-weight: 500;
-        font-size: 4.3rem;
-        margin-top: -20px;
-        margin-left: 18px;
-        color: #292729;
-
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  font-family: din-2014, sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  font-size: 4.3rem;
+  margin-top: -20px;
+  margin-left: 18px;
+  color: #292729;
 }
 
 .pad-container {
@@ -614,7 +604,6 @@ animation-name: tourdates;
   grid-template-columns: repeat(8, 48px);
   grid-template-rows: repeat(10, 48px);
 }
-
 
 .pad1 {
   grid-column-start: 1;
@@ -728,79 +717,36 @@ animation-name: tourdates;
   grid-row-end: 9;
 }
 
-@keyframes fadeInLeft {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate(100px, 50px);
-    -ms-transform: translate(100px, 50px);
-    transform: translate(100px, 50px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate(-100px, -50px);
-    -ms-transform: translate(-100px, -50px);
-    transform: translate(-100px, -50px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
-
 @keyframes growsampler {
   from {
-    transform: scale(0) translate(-550px, 300px);
-    transform-origin: bottom left;
+      transform: scale(0) translate(-550px, 300px);
+      transform-origin: bottom left;
   }
   to {
-    transform: scale(1);
+      transform: scale(1);
   }
 }
 
 @keyframes tourdates {
   from {
-    transform: scale(0) translate(550px, -300px);
-    transform-origin: top right;
+      transform: scale(0) translate(550px, -300px);
+      transform-origin: top right;
   }
   to {
-    transform: scale(1);
+      transform: scale(1);
   }
 }
 
 @keyframes tourdates-hide {
   from {
-    transform:  translate(20px, 800px);
-    transform: scale(1);
-    transform-origin: top right;
+      transform: translate(20px, 800px);
+      transform: scale(1);
+      transform-origin: top right;
   }
   to {
-    transform: scale(0);
+      transform: scale(0);
   }
 }
-
-/* @keyframes tourdates {
-  from {
-    transform: scale(0) translate(550px, -300px);
-    transform-origin: top right;
-  }
-  to {
-    transform: scale(1);
-  }
-} */
-
 
 .set-distortion {
   grid-column-start: 14;
@@ -831,54 +777,52 @@ animation-name: tourdates;
 }
 
 .set-bpm {
-    grid-column-start: 4;
-    grid-column-end: 11;
-    grid-column-end: 8;
-    grid-row-start: 0;
-    grid-row-end: 5;
-    direction: rtl;
-    /* transform: rotate(90deg); */
-    transform: rotate(90deg) translateY(118px) translateX(96px);
+  grid-column-start: 4;
+  grid-column-end: 11;
+  grid-column-end: 8;
+  grid-row-start: 0;
+  grid-row-end: 5;
+  direction: rtl;
+  /* transform: rotate(90deg); */
+  transform: rotate(90deg) translateY(118px) translateX(96px);
 }
 
 .set-bpm-label {
-    grid-column-start: 1;
-    grid-column-end: 19;
-    grid-row-start: 5;
-    grid-row-end: 12;
-    margin-left: 20px;
-    margin-top: 43px;
+  grid-column-start: 1;
+  grid-column-end: 19;
+  grid-row-start: 5;
+  grid-row-end: 12;
+  margin-left: 20px;
+  margin-top: 43px;
 }
 
 .metronome-label {
-    grid-column-start: 1;
-    grid-column-end: 19;
-    grid-row-start: 2;
-    grid-row-end: 12;
-    margin-left: 20px;
-    margin-top: 59px;
+  grid-column-start: 1;
+  grid-column-end: 19;
+  grid-row-start: 2;
+  grid-row-end: 12;
+  margin-left: 20px;
+  margin-top: 59px;
 }
 
-
 .start-stop-label {
-    grid-column-start: 1;
-    grid-column-end: 19;
-    grid-row-start: 9;
-    grid-row-end: 12;
-    margin-left: 20px;
-    margin-top: 35px;
+  grid-column-start: 1;
+  grid-column-end: 19;
+  grid-row-start: 9;
+  grid-row-end: 12;
+  margin-left: 20px;
+  margin-top: 35px;
 }
 
 .bpm-label {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 8;
-    grid-row-end: 10;
-    text-align: center;
-    margin-left: 0px;
-    margin-top: 30px;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 8;
+  grid-row-end: 10;
+  text-align: center;
+  margin-left: 0px;
+  margin-top: 30px;
 }
-
 
 .distortion-label {
   grid-column-start: 14;
@@ -916,23 +860,20 @@ animation-name: tourdates;
 }
 
 .metronome-play-button {
-    grid-column-start: 3;
-    grid-column-end: 0;
-    grid-row-start: 9;
-    grid-row-end: 10;
+  grid-column-start: 3;
+  grid-column-end: 0;
+  grid-row-start: 9;
+  grid-row-end: 10;
 
-    transform: translateY(35px) translateX(2px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  transform: translateY(35px) translateX(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 .metronome-play-button img {
-    width: 32px;
+  width: 32px;
 }
-
 
 .close-modal {
   position: absolute;
@@ -973,7 +914,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 48px;
   width: 48px;
   border-radius: 0px;
-  background: #71B0A1;
+  background: #71b0a1;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -22px;
@@ -985,10 +926,10 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 input[type="range"]::-moz-range-track {
   width: 100%;
-  height: 4px;
+  height: 20px;
   cursor: pointer;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
-  background: #71B0A1;
+  background: #71b0a1;
   border-radius: 0px;
   border: 0px solid #000000;
 }
@@ -1029,12 +970,12 @@ input[type="range"]::-ms-fill-upper {
 input[type="range"]::-ms-thumb {
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
   border: 0px solid rgba(0, 0, 0, 0);
-  height: 48px;
-  width: 48px;
+  /* height: 48px;
+width: 48px; */
   border-radius: 0px;
-  background: #71B0A1;
+  background: #71b0a1;
   cursor: pointer;
-  height: 4px;
+  /* height: 4px; */
 }
 
 input[type="range"]:focus::-ms-fill-lower {
@@ -1056,7 +997,7 @@ input[type="range"]:focus::-ms-fill-upper {
   text-transform: uppercase;
   font-weight: 400;
   color: #292729;
-  background-color: #89D6C4;
+  background-color: #89d6c4;
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
   text-align: center;
   position: relative;
@@ -1074,7 +1015,7 @@ input[type="range"]:focus::-ms-fill-upper {
   text-transform: uppercase;
   font-weight: 400;
   color: #292729;
-  background-color: #81C9B9;
+  background-color: #81c9b9;
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
   text-align: center;
   position: relative;
@@ -1092,7 +1033,7 @@ input[type="range"]:focus::-ms-fill-upper {
   text-transform: uppercase;
   font-weight: 400;
   color: #292729;
-  background-color: #71B0A1;
+  background-color: #71b0a1;
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
   text-align: center;
   position: relative;
@@ -1110,7 +1051,7 @@ input[type="range"]:focus::-ms-fill-upper {
   text-transform: uppercase;
   font-weight: 400;
   color: #292729;
-  background-color: #588A7E;
+  background-color: #588a7e;
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
   text-align: center;
   position: relative;
@@ -1139,7 +1080,7 @@ input[type="range"]:focus::-ms-fill-upper {
 
 @media all and (max-width: 30em) {
   .sampler-pad {
-    display: block;
-    margin: 0.4em auto;
+      display: block;
+      margin: 0.4em auto;
   }
 }

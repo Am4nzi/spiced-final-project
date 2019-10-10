@@ -1,407 +1,118 @@
 import React, { useState, useEffect } from "react";
 
 export default function MusicPlayers() {
-    const [musicPlayer0, setMusicPlayer0] = useState("musicPlayer0");
-    const [musicPlayer01, setMusicPlayer01] = useState("music-player1");
-    const [musicPlayer02, setMusicPlayer02] = useState("music-player2l");
-    const [musicPlayer03, setMusicPlayer03] = useState("music-player3");
-    const [musicPlayer04, setMusicPlayer04] = useState("music-player4");
-    const [musicPlayer05, setMusicPlayer05] = useState("music-player5");
-    const [musicPlayer06, setMusicPlayer06] = useState("music-player6");
-    const [musicPlayer07, setMusicPlayer07] = useState("music-player7");
+  const [albumPosition0, setAlbumPosition0] = useState(0);
+  const [albumPosition1, setAlbumPosition1] = useState(1);
+  const [albumPosition2, setAlbumPosition2] = useState(2);
+  const [albumPosition3, setAlbumPosition3] = useState(3);
+  const [albumPosition4, setAlbumPosition4] = useState(4);
 
-    const swapMPlayerRight = e => {
-        if (musicPlayer01 === "music-player-2") {
-            setMusicPlayer01("music-player-3");
-        }
-        if (musicPlayer01 === "music-player-1") {
-            setMusicPlayer01("music-player-2");
-        }
-        if (musicPlayer01 === "music-player0") {
-            setMusicPlayer01("music-player-1");
-        }
-        if (musicPlayer01 === "music-player1") {
-            setMusicPlayer01("music-player0");
-        }
-        if (
-            musicPlayer02 === "music-player2l" ||
-            musicPlayer02 === "music-player2r"
-        ) {
-            setMusicPlayer02("music-player1");
-        }
-        if (musicPlayer02 === "music-player1") {
-            setMusicPlayer02("music-player0");
-        }
-        if (musicPlayer02 === "music-player0") {
-            setMusicPlayer02("music-player-1");
-        }
-        if (musicPlayer02 === "music-player-1") {
-            setMusicPlayer02("music-player-2");
-        }
-        if (musicPlayer03 === "music-player3") {
-            setMusicPlayer03("music-player2l");
-        }
-        if (
-            musicPlayer03 === "music-player2l" ||
-            musicPlayer03 === "music-player2r"
-        ) {
-            setMusicPlayer03("music-player1");
-        }
-        if (musicPlayer03 === "music-player1") {
-            setMusicPlayer03("music-player0");
-        }
-        if (musicPlayer03 === "music-player0") {
-            setMusicPlayer03("music-player-1");
-        }
-        if (musicPlayer04 === "music-player4") {
-            setMusicPlayer04("music-player3");
-        }
-        if (musicPlayer04 === "music-player3") {
-            setMusicPlayer04("music-player2l");
-        }
-        if (
-            musicPlayer04 === "music-player2l" ||
-            musicPlayer04 === "music-player2r"
-        ) {
-            setMusicPlayer04("music-player1");
-        }
-        if (musicPlayer04 === "music-player1") {
-            setMusicPlayer04("music-player0");
-        }
-        if (musicPlayer05 === "music-player5") {
-            setMusicPlayer05("music-player4");
-        }
-        if (musicPlayer05 === "music-player4") {
-            setMusicPlayer05("music-player3");
-        }
-        if (musicPlayer05 === "music-player3") {
-            setMusicPlayer05("music-player2l");
-        }
-        if (
-            musicPlayer05 === "music-player2l" ||
-            musicPlayer05 === "music-player2r"
-        ) {
-            setMusicPlayer05("music-player1");
-        }
-        // if (musicPlayer05 === "music-player1") {
-        //   setMusicPlayer05("music-player0");
-        // }
-        // if (musicPlayer06 === "music-player7") {
-        //   setMusicPlayer06("music-player6");
-        //   console.log("logging state of 06", musicPlayer06);
-        // }
-        if (musicPlayer06 === "music-player6") {
-            setMusicPlayer06("music-player5");
-            console.log("logging state of 06", musicPlayer06);
-        }
-        if (musicPlayer06 === "music-player5") {
-            setMusicPlayer06("music-player4");
-            console.log("logging state of 06", musicPlayer06);
-        }
-        if (musicPlayer06 === "music-player4") {
-            setMusicPlayer06("music-player3");
-            console.log("logging state of 06", musicPlayer06);
-        }
-        if (musicPlayer06 === "music-player3") {
-            setMusicPlayer06("music-player2l");
-            console.log("logging state of 06", musicPlayer06);
-        }
-        // if (musicPlayer06 === "music-player2") {
-        //   setMusicPlayer06("music-player1");
-        // }
-        // if (musicPlayer06 === "music-player1") {
-        //   setMusicPlayer06("music-player0");
-        // }
-        if (musicPlayer07 === "music-player7") {
-            setMusicPlayer07("music-player6");
-        }
-        if (musicPlayer07 === "music-player6") {
-            setMusicPlayer07("music-player5");
-        }
-        if (musicPlayer07 === "music-player5") {
-            setMusicPlayer07("music-player4");
-        }
-        if (musicPlayer07 === "music-player4") {
-            setMusicPlayer07("music-player3");
-        }
-        // if (musicPlayer07 === "music-player3") {
-        //   setMusicPlayer07("music-player2");
-        // }
-        // if (musicPlayer07 === "music-player2") {
-        //   setMusicPlayer07("music-player1");
-        // }
-        // if (musicPlayer07 === "music-player1") {
-        //   setMusicPlayer07("music-player0");
-        // }
-    };
+  const prevAlbum = e => {
+    if (albumPosition0 <= 0) {
+      setAlbumPosition0(4);
+    } else {
+      setAlbumPosition0(albumPosition0 - 1);
+    }
 
-    const swapMPlayerLeft = e => {
-        if (musicPlayer07 === "music-player3") {
-            setMusicPlayer07("music-player4");
-        }
-        if (musicPlayer07 === "music-player4") {
-            setMusicPlayer07("music-player5");
-        }
-        if (musicPlayer07 === "music-player5") {
-            setMusicPlayer07("music-player6");
-        }
-        if (musicPlayer07 === "music-player6") {
-            setMusicPlayer07("music-player7");
-        }
-        if (
-            musicPlayer06 === "music-player2l" ||
-            musicPlayer05 === "music-player2r"
-        ) {
-            setMusicPlayer06("music-player3");
-            console.log("logging state of 06", musicPlayer06);
-        }
-        if (musicPlayer06 === "music-player3") {
-            setMusicPlayer06("music-player4");
-            console.log("logging state of 06", musicPlayer06);
-        }
-        if (musicPlayer06 === "music-player4") {
-            setMusicPlayer06("music-player5");
-            console.log("logging state of 06", musicPlayer06);
-        }
-        if (musicPlayer06 === "music-player5") {
-            setMusicPlayer06("music-player6");
-            console.log("logging state of 06", musicPlayer06);
-        }
-        // if (musicPlayer06 === "music-player6") {
-        //   setMusicPlayer06("music-player7");
-        //   console.log("logging state of 06", musicPlayer06);
-        // }
-        if (musicPlayer05 === "music-player6") {
-            setMusicPlayer05("music-player7");
-        }
-        // if (musicPlayer05 === "music-player5") {
-        //   setMusicPlayer05("music-player6");
-        // }
-        if (musicPlayer05 === "music-player4") {
-            setMusicPlayer05("music-player5");
-        }
-        if (musicPlayer05 === "music-player3") {
-            setMusicPlayer05("music-player4");
-        }
-        if (
-            musicPlayer05 === "music-player2l" ||
-            musicPlayer05 === "music-player2r"
-        ) {
-            setMusicPlayer05("music-player3");
-        }
-        if (musicPlayer05 === "music-player1") {
-            setMusicPlayer05("music-player2r");
-        }
-        if (musicPlayer04 === "music-player3") {
-            setMusicPlayer04("music-player4");
-        }
-        if (
-            musicPlayer04 === "music-player2l" ||
-            musicPlayer04 === "music-player2r"
-        ) {
-            setMusicPlayer04("music-player3");
-        }
-        if (musicPlayer04 === "music-player1") {
-            setMusicPlayer04("music-player2r");
-        }
-        if (musicPlayer04 === "music-player0") {
-            setMusicPlayer04("music-player1");
-        }
+    if (albumPosition1 <= 0) {
+      setAlbumPosition1(4);
+    } else {
+      setAlbumPosition1(albumPosition1 - 1);
+    }
 
-        // if (musicPlayer03 === "music-player4") {
-        //   setMusicPlayer03("music-player5");
-        // }
-        // if (musicPlayer03 === "music-player3") {
-        //   setMusicPlayer03("music-player4");
-        // }
-        if (
-            musicPlayer03 === "music-player2l" ||
-            musicPlayer03 === "music-player2r"
-        ) {
-            setMusicPlayer03("music-player3");
-        }
-        if (musicPlayer03 === "music-player1") {
-            setMusicPlayer03("music-player2r");
-        }
-        if (musicPlayer03 === "music-player0") {
-            setMusicPlayer03("music-player1");
-        }
-        if (musicPlayer03 === "music-player-1") {
-            setMusicPlayer03("music-player0");
-        }
+    if (albumPosition2 <= 0) {
+      setAlbumPosition2(4);
+    } else {
+      setAlbumPosition2(albumPosition2 - 1);
+    }
 
-        //
-        //   if (musicPlayer02 === "music-player2") {
-        //     setMusicPlayer02("music-player1");
-        //   }
-        //   if (musicPlayer02 === "music-player3") {
-        //     setMusicPlayer02("music-player4")
-        // }
-        // if (musicPlayer02 === "music-player2") {
-        //   setMusicPlayer02("music-player3");
-        // }
-        if (musicPlayer02 === "music-player1") {
-            setMusicPlayer02("music-player2r");
-        }
-        if (musicPlayer02 === "music-player0") {
-            setMusicPlayer02("music-player1");
-        }
-        if (musicPlayer02 === "music-player-1") {
-            setMusicPlayer02("music-player0");
-        }
-        if (musicPlayer02 === "music-player-2") {
-            setMusicPlayer02("music-player-1");
-        }
+    if (albumPosition3 <= 0) {
+      setAlbumPosition3(4);
+    } else {
+      setAlbumPosition3(albumPosition3 - 1);
+    }
 
-        // if (musicPlayer01 === "music-player5") {
-        //   setMusicPlayer01("music-player6");
-        // }
-        // if (musicPlayer01 === "music-player3") {
-        //   setMusicPlayer01("music-player4");
-        // }
-        // if (musicPlayer01 === "music-player2") {
-        //   setMusicPlayer01("music-player3");
-        // }
-        // if (musicPlayer01 === "music-player1") {
-        //   setMusicPlayer01("music-player2");
-        // }
-        if (musicPlayer01 === "music-player0") {
-            setMusicPlayer01("music-player1");
-        }
-        if (musicPlayer01 === "music-player-1") {
-            setMusicPlayer01("music-player0");
-        }
-        if (musicPlayer01 === "music-player-2") {
-            setMusicPlayer01("music-player-1");
-        }
-        if (musicPlayer01 === "music-player-3") {
-            setMusicPlayer01("music-player-2");
-        }
-    };
+    if (albumPosition4 <= 0) {
+      setAlbumPosition4(4);
+    } else {
+      setAlbumPosition4(albumPosition4 - 1);
+    }
+  };
 
-    // const subtracter = function(n) {
-    //   return n - 1;
-    // };
-    //
-    // console.log("subtracter", subtracter(1));
-    //
-    // const swapMPlayerRight = e => {
-    //   if (musicPlayer01) {
-    //     setMusicPlayer01(`music-player${subtracter(1)}`);
-    //     console.log("TEST: ", musicPlayer01);
-    // }
-    //
-    //   if (musicPlayer02) {
-    //     setMusicPlayer01(`music-player${subtracter(2)}`);
-    //     console.log("musicPlayer02 in app:", musicPlayer02);
-    //   }
-    //
-    //   if (musicPlayer03) {
-    //     setMusicPlayer03(`music-player${subtracter(3)}`);
-    //   }
-    // if (musicPlayer04) {
-    //   setMusicPlayer03("music-player02");
-    // }
-    // if (musicPlayer05) {
-    //   setMusicPlayer03("music-player01");
-    // }
-    // if (musicPlayer06) {
-    //   setMusicPlayer03("music-player-hidden");
-    // }
-    // if (musicPlayer07) {
-    //   setMusicPlayer04("music-player03");
-    // }
-    // };
+  const nextAlbum = e => {
+    if (albumPosition0 >= 4) {
+      setAlbumPosition0(0);
+    } else {
+      setAlbumPosition0(albumPosition0 + 1);
+    }
 
-    return (
-        <React.Fragment>
-            <div id="body-wrapper2">
-                <div>
-                    <div className="box"></div>
-                    <div className="box02"></div>
-                    <div
-                        onClick={swapMPlayerLeft}
-                        className="albums-left"
-                    ></div>
-                    <div
-                        onClick={swapMPlayerRight}
-                        className="albums-right"
-                    ></div>
+    if (albumPosition1 >= 4) {
+      setAlbumPosition1(0);
+    } else {
+      setAlbumPosition1(albumPosition1 + 1);
+    }
 
-                    <iframe
-                        className={musicPlayer01}
-                        src="https://bandcamp.com/EmbeddedPlayer/track=97838974/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
-                        seamless
-                    >
-                        <a href="http://algernoncornelius.bandcamp.com/track/as-long-as-theres-you">
-                            As Long As There&#39;s You by Algernon Cornelius
-                        </a>
-                    </iframe>
+    if (albumPosition2 >= 4) {
+      setAlbumPosition2(0);
+    } else {
+      setAlbumPosition2(albumPosition2 + 1);
+    }
 
-                    <iframe
-                        className={musicPlayer02}
-                        src="https://bandcamp.com/EmbeddedPlayer/track=2424298729/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-                        seamless
-                    >
-                        <a href="http://algernoncornelius.bandcamp.com/track/adieu">
-                            Adieu by Algernon Cornelius
-                        </a>
-                    </iframe>
+    if (albumPosition3 >= 4) {
+      setAlbumPosition3(0);
+    } else {
+      setAlbumPosition3(albumPosition3 + 1);
+    }
 
-                    <iframe
-                        className={musicPlayer03}
-                        src="https://bandcamp.com/EmbeddedPlayer/track=2431711501/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
-                        seamless
-                    >
-                        <a href="http://algernoncornelius.bandcamp.com/track/radio-edit">
-                            Radio Edit by Algernon Cornelius
-                        </a>
-                    </iframe>
+    if (albumPosition4 >= 4) {
+      setAlbumPosition4(0);
+    } else {
+      setAlbumPosition4(albumPosition4 + 1);
+    }
+  };
 
-                    <iframe
-                        className={musicPlayer04}
-                        src="https://bandcamp.com/EmbeddedPlayer/track=4044113520/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
-                        seamless
-                    >
-                        <a href="http://algernoncornelius.bandcamp.com/track/absolute-badman-riddim">
-                            Absolute Badman Riddim by Algernon Cornelius
-                        </a>
-                    </iframe>
+  return (
+    <React.Fragment>
+      <div className="albums-wrapper">
 
-                    <iframe
-                        className={musicPlayer05}
-                        src="https://bandcamp.com/EmbeddedPlayer/album=1535006646/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-                        seamless
-                    >
-                        <a href="http://algernoncornelius.bandcamp.com/album/who-knows-maybe-they-speak-for-you">
-                            Who Knows? Maybe They Speak For You by Algernon
-                            Cornelius
-                        </a>
-                    </iframe>
+        <div className="next-album" onClick={nextAlbum}></div>
 
-                    <iframe
-                        className={musicPlayer06}
-                        src="https://bandcamp.com/EmbeddedPlayer/album=1122987924/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-                        seamless
-                    >
-                        <a href="http://algernoncornelius.bandcamp.com/album/exit-the-wu-tang-36-chambers-ac-version">
-                            Exit the Wu-Tang: 36 Chambers (AC Version) by
-                            Algernon Cornelius
-                        </a>
-                    </iframe>
+        <img className="prev-album-arrow" onClick={nextAlbum} src="/images/right-arrow.png" />
 
-                    <iframe
-                        className={musicPlayer07}
-                        src="https://bandcamp.com/EmbeddedPlayer/album=3420241321/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
-                        seamless
-                    >
-                        <a href="http://algernoncornelius.bandcamp.com/album/algernoncornelius-dark-beats-only-quit-yer-sen">
-                            AlgernonCornelius - dARK bEATS oNLY / Quit Yer Sen -
-                            ^ by Algernon Cornelius
-                        </a>
-                    </iframe>
-                </div>
-            </div>
-        </React.Fragment>
-    );
+        <div className="prev-album" onClick={prevAlbum}></div>
+
+        <img className="next-album-arrow"  onClick={prevAlbum} src="/images/right-arrow.png" />
+
+        <iframe
+          className={`album-position${albumPosition0}`}
+          src="https://bandcamp.com/EmbeddedPlayer/album=897381078/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
+          seamless
+        ></iframe>
+
+        <iframe
+          className={`album-position${albumPosition1}`}
+          src="https://bandcamp.com/EmbeddedPlayer/album=860871374/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
+          seamless
+        ></iframe>
+
+        <iframe
+          className={`album-position${albumPosition2}`}
+          src="https://bandcamp.com/EmbeddedPlayer/album=3937120203/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
+          seamless
+        ></iframe>
+
+        <iframe
+          className={`album-position${albumPosition3}`}
+          src="https://bandcamp.com/EmbeddedPlayer/album=557612822/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
+          seamless
+        ></iframe>
+
+        <iframe
+          className={`album-position${albumPosition4}`}
+          src="https://bandcamp.com/EmbeddedPlayer/album=2117210254/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
+          seamless
+        ></iframe>
+      </div>
+    </React.Fragment>
+  );
 }
