@@ -1,6 +1,3 @@
-
-
-
 const express = require("express");
 const app = express();
 const compression = require("compression");
@@ -24,6 +21,8 @@ app.get("*", function(req, res) {
     res.sendFile(__dirname + "/index.html");
 });
 
-app.listen(8080, function() {
+console.log("process.env.PORT: ", process.env.PORT);
+
+app.listen(process.env.PORT || 8080, function() {
     console.log("I'm listening.");
 });
